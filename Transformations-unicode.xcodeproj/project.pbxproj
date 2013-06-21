@@ -11,23 +11,11 @@
 		458E1C7F17743E0400604E81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 458E1C7E17743E0400604E81 /* main.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		458E1C7617743E0400604E81 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		458E1C7817743E0400604E81 /* Transformations-unicode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Transformations-unicode"; sourceTree = BUILT_PRODUCTS_DIR; };
+		458E1C7817743E0400604E81 /* unicode-souligne */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "unicode-souligne"; sourceTree = BUILT_PRODUCTS_DIR; };
 		458E1C7B17743E0400604E81 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		458E1C7E17743E0400604E81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		458E1C8117743E0400604E81 /* Transformations-unicode-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Transformations-unicode-Prefix.pch"; sourceTree = "<group>"; };
+		458E1C8117743E0400604E81 /* unicode-souligne-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "unicode-souligne-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +42,7 @@
 		458E1C7917743E0400604E81 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				458E1C7817743E0400604E81 /* Transformations-unicode */,
+				458E1C7817743E0400604E81 /* unicode-souligne */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,7 +67,7 @@
 		458E1C8017743E0400604E81 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				458E1C8117743E0400604E81 /* Transformations-unicode-Prefix.pch */,
+				458E1C8117743E0400604E81 /* unicode-souligne-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -87,21 +75,20 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		458E1C7717743E0400604E81 /* Transformations-unicode */ = {
+		458E1C7717743E0400604E81 /* unicode-souligne */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 458E1C8617743E0400604E81 /* Build configuration list for PBXNativeTarget "Transformations-unicode" */;
+			buildConfigurationList = 458E1C8617743E0400604E81 /* Build configuration list for PBXNativeTarget "unicode-souligne" */;
 			buildPhases = (
 				458E1C7417743E0400604E81 /* Sources */,
 				458E1C7517743E0400604E81 /* Frameworks */,
-				458E1C7617743E0400604E81 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Transformations-unicode";
+			name = "unicode-souligne";
 			productName = "unicode-souligne";
-			productReference = 458E1C7817743E0400604E81 /* Transformations-unicode */;
+			productReference = 458E1C7817743E0400604E81 /* unicode-souligne */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +112,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				458E1C7717743E0400604E81 /* Transformations-unicode */,
+				458E1C7717743E0400604E81 /* unicode-souligne */,
 			);
 		};
 /* End PBXProject section */
@@ -205,8 +192,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "unicode-souligne/Transformations-unicode-Prefix.pch";
-				PRODUCT_NAME = "Transformations-unicode";
+				GCC_PREFIX_HEADER = "unicode-souligne/unicode-souligne-Prefix.pch";
+				PRODUCT_NAME = "unicode-souligne";
 			};
 			name = Debug;
 		};
@@ -214,8 +201,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "unicode-souligne/Transformations-unicode-Prefix.pch";
-				PRODUCT_NAME = "Transformations-unicode";
+				GCC_PREFIX_HEADER = "unicode-souligne/unicode-souligne-Prefix.pch";
+				PRODUCT_NAME = "unicode-souligne";
 			};
 			name = Release;
 		};
@@ -231,7 +218,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		458E1C8617743E0400604E81 /* Build configuration list for PBXNativeTarget "Transformations-unicode" */ = {
+		458E1C8617743E0400604E81 /* Build configuration list for PBXNativeTarget "unicode-souligne" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				458E1C8717743E0400604E81 /* Debug */,
