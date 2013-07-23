@@ -66,7 +66,6 @@ $ xcodebuild
 ```
 
 `transformations-unicode` est installé dans `build/Release/transformations-unicode`
-```
 
 ### xcode, interface graphique
 1. Menu `Product > Clean`
