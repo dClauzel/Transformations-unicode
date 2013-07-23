@@ -1,0 +1,61 @@
+//  fonctions.h
+//
+//  Created by Damien Clauzel on 21/06/13.
+//  GPLv3, Damien Clauzel
+//
+
+@interface NSString (UTF)
+
+/*
+ Identifie la position d'un caractère unicode, qui peut s'étendre sur plusieurs octets
+ argument : le « position humaine » du caractère dans la chaîne
+ retourne : la « position technique » du caractère dans la chaîne
+ */
+- (NSRange) rangeOfUTFCodePoint: (NSUInteger)number;
+
+/*
+ Écrit sur la sortie standard
+ argument : chaîne à écrire
+ */
+- (void) NSPrint;
+
+/*
+ * Enrichie la chaîne de caractères avec l'argument
+ * argument : le caractère modificateur
+ * retourne : la chaîne préfixée du modificateur
+ * remarque : méthode utilisée pour réalisée les autres méthodes de transformation
+ */
+- (NSString*) transformeCode: (NSString*)code;
+
+/*
+ * Enrichie la chaîne de caractères avec «  ̲ »
+ * retourne : la chaîne préfixée du modificateur U+0332 COMBINING LOW LINE
+ */
+- (NSString*) transformeSouligne;
+
+/*
+ * Enrichie la chaîne de caractères avec «  ̳ »
+ * retourne : la chaîne préfixée du modificateur U+0333 COMBINING DOUBLE LOW LINE
+ */
+- (NSString*) transformeSouligneDouble;
+
+/*
+ * Enrichie la chaîne de caractères avec «  ̼ »
+ * retourne : la chaîne préfixée du modificateur U+033C COMBINING SEAGULL BELOW
+ */
+- (NSString*) transformeSouligneVague;
+
+/*
+ * Enrichie la chaîne de caractères avec «  ̅ »
+ * retourne : la chaîne préfixée du modificateur U+0305 COMBINING OVERLINE
+ */
+- (NSString*) transformeSurligne;
+
+/*
+ * Enrichie la chaîne de caractères avec «  ̿ »
+ * retourne : la chaîne préfixée du modificateur U+033F COMBINING DOUBLE OVERLINE
+ */
+- (NSString*) transformeSurligneDouble;
+
+
+@end
