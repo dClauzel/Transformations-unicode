@@ -44,4 +44,8 @@
 	return [ self transformeCode: @"\u033f"];
 }
 
+- (NSString*) transformeBarre {
+	return [ self transformeCode: @"\u0335"];
+}
+
 @end

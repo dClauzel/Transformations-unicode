@@ -58,6 +58,8 @@ int main(int argc, char **argv) {
 		[options registerOption:'v' long:@"souligne-vague" description:@"Souligne le texte avec une vague" flags:GBValueNone];
 		[options registerOption:'u' long:@"surligne" description:@"Surligne le texte" flags:GBValueNone];
 		[options registerOption:'U' long:@"surligne-double" description:@"Double surligne le texte" flags:GBValueNone];
+		[options registerOption:'b' long:@"barre" description:@"barre le texte" flags:GBValueNone];
+		[options registerOption:'B' long:@"barre" description:@"barre longuement le texte" flags:GBValueNone];
 		[options registerOption:'c' long:@"code" description:@"Applique le modificateur désigné par son code UNICODE" flags:GBValueRequired];
 		
 		[options registerOptionsToCommandLineParser:parser];
@@ -108,6 +110,8 @@ int main(int argc, char **argv) {
 		id actionSouligneVague = [parser valueForOption:@"souligne-vague"];
 		id actionSurligne = [parser valueForOption:@"surligne"];
 		id actionSurligneDouble = [parser valueForOption:@"surligne-double"];
+		id actionBarre = [parser valueForOption:@"barre"];
+		id actionBarreLong = [parser valueForOption:@"barre-long"];
 		id actionModifieAvecCode = [parser valueForOption:@"code"];
 
 
@@ -158,6 +162,12 @@ int main(int argc, char **argv) {
 				
 				if(actionSurligneDouble)
 					texteSortie = [texteSortie transformeSurligneDouble];
+				
+				if(actionBarre)
+					texteSortie = [texteSortie transformeBarre];
+				
+				if(actionBarreLong)
+					texteSortie = [texteSortie transformeBarreLong];
 				
 				if(actionModifieAvecCode)
 					texteSortie = [texteSortie transformeCode:(NSString*)actionModifieAvecCode];

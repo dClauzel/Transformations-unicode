@@ -57,5 +57,16 @@
  */
 - (NSString*) transformeSurligneDouble;
 
+/*
+ * Enrichie la chaîne de caractères avec «  ̵ »
+ * retourne : la chaîne préfixée du modificateur U+0335 COMBINING SHORT STROKE OVERLAY
+ */
+- (NSString*) transformeBarre;
+
+/*
+ * Enrichie la chaîne de caractères avec «  ̶ »
+ * retourne : la chaîne préfixée du modificateur U+0336 COMBINING LONG STROKE OVERLAY
+ */
+- (NSString*) transformeBarreLong;
 
 @end
