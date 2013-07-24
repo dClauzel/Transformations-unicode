@@ -59,7 +59,7 @@ int main(int argc, char **argv) {
 		[options registerOption:'u' long:@"surligne" description:@"Surligne le texte" flags:GBValueNone];
 		[options registerOption:'U' long:@"surligne-double" description:@"Double surligne le texte" flags:GBValueNone];
 		[options registerOption:'b' long:@"barre" description:@"barre le texte" flags:GBValueNone];
-		[options registerOption:'B' long:@"barre" description:@"barre longuement le texte" flags:GBValueNone];
+		[options registerOption:'B' long:@"barre-long" description:@"barre longuement le texte" flags:GBValueNone];
 		[options registerOption:'c' long:@"code" description:@"Applique le modificateur désigné par son code UNICODE" flags:GBValueRequired];
 		
 		[options registerOptionsToCommandLineParser:parser];
