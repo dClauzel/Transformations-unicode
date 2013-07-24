@@ -16,6 +16,8 @@ Usage transformations-unicode [OPTIONS] <arguments séparé par des espaces>
 -v --souligne-vague  Souligne le texte avec une vague 
 -u --surligne        Surligne le texte 
 -U --surligne-double Double surligne le texte 
+-b --barre           barre le texte 
+-B --barre-long      barre longuement le texte 
 -c --code <value>    Applique le modificateur désigné par son code UNICODE 
 
 Les arguments ne prenant pas de paramètres peuvent être niés avec le préfix --no-<name> ou --<name>=0
