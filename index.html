@@ -44,7 +44,7 @@
 <h2>
 <a name="syntaxe" class="anchor" href="#syntaxe"><span class="octicon octicon-link"></span></a>Syntaxe</h2>
 
-<div class="highlight"><pre><span class="nv">$ </span>transformations-unicode --help
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>transformations-unicode --help
 Usage transformations-unicode <span class="o">[</span>OPTIONS<span class="o">]</span> &lt;arguments séparé par des espaces&gt;
 -h --help            Affiche cette aide et termine 
 -V --version         Affiche la version et termine 
@@ -55,6 +55,7 @@ Usage transformations-unicode <span class="o">[</span>OPTIONS<span class="o">]</
 -U --surligne-double Double surligne le texte 
 -b --barre           barre le texte 
 -B --barre-long      barre longuement le texte 
+-i --italique        transforme le texte en italique <span class="o">(</span>pour les caractères possibles<span class="o">)</span> 
 -c --code &lt;value&gt;    Applique le modificateur désigné par son code UNICODE 
 
 Les arguments ne prenant pas de paramètres peuvent être niés avec le préfix --no-&lt;name&gt; ou --&lt;name&gt;<span class="o">=</span>0
@@ -65,19 +66,19 @@ Les arguments ne prenant pas de paramètres peuvent être niés avec le préfix 
 
 <p>Souligner du texte :</p>
 
-<div class="highlight"><pre><span class="nv">$ </span>date | transformations-unicode --souligne
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>date | transformations-unicode --souligne
 ̲M̲a̲r̲ ̲j̲u̲l̲ ̲2̲3̲ ̲1̲6̲:̲4̲7̲:̲5̲9̲ ̲C̲E̲S̲T̲ ̲2̲0̲1̲3̲
 </pre></div>
 
 <p>Souligne d’une vague et surligner du texte :</p>
 
-<div class="highlight"><pre><span class="nv">$ </span>date | transformations-unicode -v --surligne
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>date | transformations-unicode -v --surligne
 ̼̅M̼̅a̼̅r̼̅ ̼̅j̼̅u̼̅l̼̅ ̼̅2̼̅3̼̅ ̼̅1̼̅6̼̅:̼̅4̼̅6̼̅:̼̅0̼̅0̼̅ ̼̅C̼̅E̼̅S̼̅T̼̅ ̼̅2̼̅0̼̅1̼̅3̼̅
 </pre></div>
 
 <p>Enrichi les caractères du texte avec « U+07F0 NKO COMBINING LONG LOW TONE » </p>
 
-<div class="highlight"><pre><span class="nv">$ </span>date | transformations-unicode --code  ߰
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>date | transformations-unicode --code  ߰
 ߰M߰a߰r߰ ߰j߰u߰l߰ ߰2߰3߰ ߰1߰6߰:߰5߰4߰:߰4߰3߰ ߰C߰E߰S߰T߰ ߰2߰0߰1߰3߰
 </pre></div>
 
@@ -100,7 +101,7 @@ Les arguments ne prenant pas de paramètres peuvent être niés avec le préfix 
 <h3>
 <a name="xcode-ligne-de-commande" class="anchor" href="#xcode-ligne-de-commande"><span class="octicon octicon-link"></span></a>xcode, ligne de commande</h3>
 
-<div class="highlight"><pre><span class="nv">$ </span>xcodebuild clean
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>xcodebuild clean
 <span class="nv">$ </span>xcodebuild
 </pre></div>
 
@@ -125,7 +126,7 @@ Les arguments ne prenant pas de paramètres peuvent être niés avec le préfix 
     </div>
     <footer>
       <div class="owner">
-      <p><a href="https://github.com/dClauzel" class="avatar"><img src="https://secure.gravatar.com/avatar/fd1bef5234fc75931b12a2fd19bbe0dc?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="48" height="48"/></a> <a href="https://github.com/dClauzel">dClauzel</a> maintains <a href="https://github.com/dClauzel/Transformations-unicode">Transformations-unicode</a></p>
+      <p><a href="https://github.com/dClauzel" class="avatar"><img src="https://2.gravatar.com/avatar/fd1bef5234fc75931b12a2fd19bbe0dc?d=https%3A%2F%2Fidenticons.github.com%2F8296d47bd7e38131a750623f344c7796.png&amp;s=30" width="48" height="48"/></a> <a href="https://github.com/dClauzel">dClauzel</a> maintains <a href="https://github.com/dClauzel/Transformations-unicode">Transformations-unicode</a></p>
 
 
       </div>
