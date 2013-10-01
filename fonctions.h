@@ -69,4 +69,10 @@
  */
 - (NSString*) transformeBarreLong;
 
+/*
+ * Transforme les caractères de la chaîne en italique si possible; le cas échéant, retourne le caractère d'entrée
+ * retourne : la chaîne préfixée du modificateur U+0336 COMBINING LONG STROKE OVERLAY
+ */
+- (NSString*) transformeItalique;
+
 @end

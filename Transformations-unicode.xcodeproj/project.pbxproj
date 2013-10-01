@@ -31,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		45036AD817FB889B001D84F8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		458B4989178E010E008FF720 /* fonctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fonctions.m; sourceTree = SOURCE_ROOT; };
 		458B498B178E022E008FF720 /* fonctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fonctions.h; sourceTree = SOURCE_ROOT; };
 		45F8EC7E1779C68A006828AE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
@@ -66,6 +67,7 @@
 				45F8EC7E1779C68A006828AE /* main.m */,
 				458B498B178E022E008FF720 /* fonctions.h */,
 				458B4989178E010E008FF720 /* fonctions.m */,
+				45036AD817FB889B001D84F8 /* README.md */,
 				73484A061511FD010031EF85 /* Transformations-unicode-Prefix.pch */,
 				73484A021511FD010031EF85 /* GBCli */,
 				734849FF1511FD010031EF85 /* Frameworks */,

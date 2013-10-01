@@ -23,8 +23,6 @@ void registerOptions(GBOptionsHelper *options) {
 
 #import "fonctions.h"
 
-
-
 int main(int argc, char **argv) {
 	
 	@autoreleasepool {
@@ -53,14 +51,15 @@ int main(int argc, char **argv) {
 		GBCommandLineParser *parser = [[GBCommandLineParser alloc] init];
 
 		// Create parser and register all options.
-		[options registerOption:'s' long:@"souligne" description:@"Souligne le texte" flags:GBValueNone];
-		[options registerOption:'S' long:@"souligne-double" description:@"Double souligne le texte" flags:GBValueNone];
-		[options registerOption:'v' long:@"souligne-vague" description:@"Souligne le texte avec une vague" flags:GBValueNone];
-		[options registerOption:'u' long:@"surligne" description:@"Surligne le texte" flags:GBValueNone];
-		[options registerOption:'U' long:@"surligne-double" description:@"Double surligne le texte" flags:GBValueNone];
+		[options registerOption:'s' long:@"souligne" description:@"souligne le texte" flags:GBValueNone];
+		[options registerOption:'S' long:@"souligne-double" description:@"double souligne le texte" flags:GBValueNone];
+		[options registerOption:'v' long:@"souligne-vague" description:@"souligne le texte avec une vague" flags:GBValueNone];
+		[options registerOption:'u' long:@"surligne" description:@"surligne le texte" flags:GBValueNone];
+		[options registerOption:'U' long:@"surligne-double" description:@"double surligne le texte" flags:GBValueNone];
 		[options registerOption:'b' long:@"barre" description:@"barre le texte" flags:GBValueNone];
 		[options registerOption:'B' long:@"barre-long" description:@"barre longuement le texte" flags:GBValueNone];
-		[options registerOption:'c' long:@"code" description:@"Applique le modificateur désigné par son code UNICODE" flags:GBValueRequired];
+		[options registerOption:'i' long:@"italique" description:@"transforme le texte en italique (pour les caractères possibles)" flags:GBValueNone];
+		[options registerOption:'c' long:@"code" description:@"applique le modificateur désigné par son code UNICODE" flags:GBValueRequired];
 		
 		[options registerOptionsToCommandLineParser:parser];
 		__block BOOL commandLineValid = YES;
@@ -112,6 +111,7 @@ int main(int argc, char **argv) {
 		id actionSurligneDouble = [parser valueForOption:@"surligne-double"];
 		id actionBarre = [parser valueForOption:@"barre"];
 		id actionBarreLong = [parser valueForOption:@"barre-long"];
+		id actionItalique = [parser valueForOption:@"italique"];
 		id actionModifieAvecCode = [parser valueForOption:@"code"];
 
 
@@ -132,24 +132,25 @@ int main(int argc, char **argv) {
 		 donc pas le choix, il faut éplucher les caractères 1 par 1.
 		 */
 		__block int texteSourceTaille = 0;
-		[texteSource enumerateSubstringsInRange:NSMakeRange(0, [texteSource length])
+		[texteSource enumerateSubstringsInRange:NSMakeRange(0, [texteSource length]-1)
 			options:NSStringEnumerationByComposedCharacterSequences
 			usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
 			texteSourceTaille++;
 			}];
 		
-			
+		
 		/*
 		 Moulinage du texte pour le traiter caractère par caractère.
 		 */
 			for(int i=0; i<texteSourceTaille; i++) {
 				
 				// extraction du caractère courant
-				NSString *tmpCaractere = [texteSource substringWithRange:[texteSource rangeOfUTFCodePoint:i]];
+				NSString *tmpCaractere = [texteSource substringWithRange: [texteSource rangeOfUTFCodePoint:i] ];
+
 				
 				// application de chaque modificateur demandé
 				if(actionSouligne)
-					texteSortie = [texteSortie transformeSouligne];
+					texteSortie = [texteSortie stringByAppendingString: [tmpCaractere transformeSouligne] ];
 
 				if(actionSouligneDouble)
 					texteSortie = [texteSortie transformeSouligneDouble];
@@ -169,16 +170,17 @@ int main(int argc, char **argv) {
 				if(actionBarreLong)
 					texteSortie = [texteSortie transformeBarreLong];
 				
+				if(actionItalique)
+					texteSortie = [texteSortie stringByAppendingString: [tmpCaractere transformeItalique] ];
+
+				
 				if(actionModifieAvecCode)
 					texteSortie = [texteSortie transformeCode:(NSString*)actionModifieAvecCode];
-				
-				texteSortie = [ texteSortie stringByAppendingString: tmpCaractere ];
-				
+		
 			}
 
 		// affichage de la chaîne modifiée
 		[texteSortie writeToFile:@"/dev/stdout" atomically:NO encoding:NSUTF8StringEncoding error:NULL];
-
 		
 		return EXIT_SUCCESS;
 	} // fin @autoreleasepool
