@@ -250,7 +250,7 @@
 				GCC_PREFIX_HEADER = "Transformations-unicode-Prefix.pch";
 				INSTALL_PATH = "";
 				PRODUCT_NAME = "transformations-unicode";
-				SDKROOT = "";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -261,7 +261,7 @@
 				GCC_PREFIX_HEADER = "Transformations-unicode-Prefix.pch";
 				INSTALL_PATH = "";
 				PRODUCT_NAME = "transformations-unicode";
-				SDKROOT = "";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
