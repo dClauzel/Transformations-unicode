@@ -50,10 +50,6 @@
 
 - (NSString*) transformeItalique {
 
-
-	// Si le caractère n'a pas de transformation connue, on le retournera à l'identique.
-	NSString* res = self;
-
 	// Attention : les codes unicodes de ces caractères ne sont pas contigus; un simple décalage n'est pas possible.
 
 	NSDictionary* translitteration = @{
@@ -168,7 +164,8 @@
 		@"Ω" : @"𝛺",	// U+1D6FA MATHEMATICAL ITALIC CAPITAL OMEGA
 	};
 
-	return translitteration[res];
+	// Si le caractère n'a pas de transformation connue, on le retournera à l'identique.
+	return translitteration[self] != NULL ? translitteration[self] : self;
 
 }
 
