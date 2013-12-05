@@ -169,4 +169,59 @@
 
 }
 
+- (NSString*) transformeIndice {
+
+	// Attention : les codes unicodes de ces caractères ne sont pas contigus; un simple décalage n'est pas possible.
+	
+	NSDictionary* translitteration = @{
+									
+		/* les lettres latines */
+							
+									 
+		/* les chiffres romains */
+		@"0" : @"₀",	// U+2080 SUBSCRIPT ZERO
+		@"1" : @"₁",	// U+2081 SUBSCRIPT ONE
+		@"2" : @"₂",	// U+2082 SUBSCRIPT TWO
+		@"3" : @"₃",	// U+2083 SUBSCRIPT THREE
+		@"4" : @"₄",	// U+2084 SUBSCRIPT FOUR
+		@"5" : @"₅",	// U+2085 SUBSCRIPT FIVE
+		@"6" : @"₆",	// U+2086 SUBSCRIPT SIX
+		@"7" : @"₇",	// U+2087 SUBSCRIPT SEVEN
+		@"8" : @"₈",	// U+2088 SUBSCRIPT EIGHT
+		@"9" : @"₉",	// U+2089 SUBSCRIPT NINE
+	};
+	
+	// Si le caractère n'a pas de transformation connue, on le retournera à l'identique.
+	return translitteration[self] != NULL ? translitteration[self] : self;
+
+}
+
+- (NSString*) transformeExposant {
+	
+	// Attention : les codes unicodes de ces caractères ne sont pas contigus; un simple décalage n'est pas possible.
+
+	NSDictionary* translitteration = @{
+									
+		/* les lettres latines */
+		@"i" : @"ⁱ",	// U+2071 SUPERSCRIPT LATIN SMALL LETTER I
+		@"n" : @"ⁿ",	// U+207F SUPERSCRIPT LATIN SMALL LETTER N
+		 
+		/* les chiffres romains */
+		@"0" : @"⁰",	// U+2070 SUPERSCRIPT ZERO
+		@"1" : @"¹",	// U+00B9 SUPERSCRIPT ONE
+		@"2" : @"²",	// U+00B2 SUPERSCRIPT TWO
+		@"3" : @"³",	// U+00B3 SUPERSCRIPT THREE
+		@"4" : @"⁴",	// U+2074 SUPERSCRIPT FOUR
+		@"5" : @"⁵",	// U+2075 SUPERSCRIPT FIVE
+		@"6" : @"⁶",	// U+2076 SUPERSCRIPT SIX
+		@"7" : @"⁷",	// U+2077 SUPERSCRIPT SEVEN
+		@"8" : @"⁸",	// U+2078 SUPERSCRIPT EIGHT
+		@"9" : @"⁹",	// U+2079 SUPERSCRIPT NINE
+	};
+	
+	// Si le caractère n'a pas de transformation connue, on le retournera à l'identique.
+	return translitteration[self] != NULL ? translitteration[self] : self;
+	
+}
+
 @end

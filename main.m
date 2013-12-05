@@ -59,6 +59,8 @@ int main(int argc, char **argv) {
 		[options registerOption:'b' long:@"barre" description:@"barre le texte" flags:GBValueNone];
 		[options registerOption:'B' long:@"barre-long" description:@"barre longuement le texte" flags:GBValueNone];
 		[options registerOption:'i' long:@"italique" description:@"transforme le texte en italique (pour les caractères possibles)" flags:GBValueNone];
+		[options registerOption:'m' long:@"indice" description:@"transforme le texte en indice (pour les caractères possibles)" flags:GBValueNone];
+		[options registerOption:'M' long:@"exposant" description:@"transforme le texte en exposant (pour les caractères possibles)" flags:GBValueNone];
 		[options registerOption:'c' long:@"code" description:@"applique le modificateur désigné par son code UNICODE" flags:GBValueRequired];
 		
 		[options registerOptionsToCommandLineParser:parser];
@@ -112,6 +114,8 @@ int main(int argc, char **argv) {
 		id actionBarre = [parser valueForOption:@"barre"];
 		id actionBarreLong = [parser valueForOption:@"barre-long"];
 		id actionItalique = [parser valueForOption:@"italique"];
+		id actionIndice = [parser valueForOption:@"indice"];
+		id actionExposant = [parser valueForOption:@"exposant"];
 		id actionModifieAvecCode = [parser valueForOption:@"code"];
 
 
@@ -173,6 +177,11 @@ int main(int argc, char **argv) {
 				if(actionItalique)
 					texteSortie = [texteSortie stringByAppendingString: [tmpCaractere transformeItalique] ];
 
+				if(actionIndice)
+					texteSortie = [texteSortie stringByAppendingString: [tmpCaractere transformeIndice] ];
+				
+				if(actionExposant)
+					texteSortie = [texteSortie stringByAppendingString: [tmpCaractere transformeExposant] ];
 				
 				if(actionModifieAvecCode)
 					texteSortie = [texteSortie transformeCode:(NSString*)actionModifieAvecCode];

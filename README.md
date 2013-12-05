@@ -19,6 +19,8 @@ Usage transformations-unicode [OPTIONS] <arguments séparé par des espaces>
 -b --barre           barre le texte 
 -B --barre-long      barre longuement le texte 
 -i --italique        transforme le texte en italique (pour les caractères possibles) 
+-m --indice          transforme le texte en indice (pour les caractères possibles) 
+-M --exposant        transforme le texte en exposant (pour les caractères possibles) 
 -c --code <value>    Applique le modificateur désigné par son code UNICODE 
 
 Les arguments ne prenant pas de paramètres peuvent être niés avec le préfix --no-<name> ou --<name>=0

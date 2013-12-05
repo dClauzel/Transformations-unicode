@@ -71,8 +71,20 @@
 
 /*
  * Transforme les caractères de la chaîne en italique si possible; le cas échéant, retourne le caractère d'entrée
- * retourne : la chaîne préfixée du modificateur U+0336 COMBINING LONG STROKE OVERLAY
+ * retourne : la chaîne transformée
  */
 - (NSString*) transformeItalique;
+
+/*
+ * Transforme les caractères de la chaîne en indice si possible; le cas échéant, retourne le caractère d'entrée
+ * retourne : la chaîne transformée
+ */
+- (NSString*) transformeIndice;
+
+/*
+ * Transforme les caractères de la chaîne en exposant si possible; le cas échéant, retourne le caractère d'entrée
+ * retourne : la chaîne transformée
+ */
+- (NSString*) transformeExposant;
 
 @end
