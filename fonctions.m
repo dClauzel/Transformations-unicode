@@ -48,6 +48,10 @@
 	return [ self transformeCode: @"\u0335"];
 }
 
+- (NSString*) transformeBarreLong {
+	return [ self transformeCode: @"\u0336"];
+}
+
 - (NSString*) transformeItalique {
 
 	// Attention : les codes unicodes de ces caractères ne sont pas contigus; un simple décalage n'est pas possible.
@@ -165,7 +169,7 @@
 	};
 
 	// Si le caractère n'a pas de transformation connue, on le retournera à l'identique.
-	return translitteration[self] != NULL ? translitteration[self] : self;
+	return [translitteration objectForKey: self] != NULL ? [translitteration objectForKey: self] : self;
 
 }
 
@@ -176,7 +180,7 @@
 	NSDictionary* translitteration = @{
 									
 		/* les lettres latines */
-							
+
 									 
 		/* les chiffres romains */
 		@"0" : @"₀",	// U+2080 SUBSCRIPT ZERO
@@ -192,7 +196,7 @@
 	};
 	
 	// Si le caractère n'a pas de transformation connue, on le retournera à l'identique.
-	return translitteration[self] != NULL ? translitteration[self] : self;
+	return [translitteration objectForKey: self] != NULL ? [translitteration objectForKey: self] : self;
 
 }
 
@@ -220,7 +224,7 @@
 	};
 	
 	// Si le caractère n'a pas de transformation connue, on le retournera à l'identique.
-	return translitteration[self] != NULL ? translitteration[self] : self;
+	return [translitteration objectForKey: self] != NULL ? [translitteration objectForKey: self] : self;
 	
 }
 

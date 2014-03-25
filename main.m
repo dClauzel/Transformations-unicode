@@ -157,22 +157,22 @@ int main(int argc, char **argv) {
 					texteSortie = [texteSortie stringByAppendingString: [tmpCaractere transformeSouligne] ];
 
 				if(actionSouligneDouble)
-					texteSortie = [texteSortie transformeSouligneDouble];
+					texteSortie = [texteSortie stringByAppendingString: [tmpCaractere transformeSouligneDouble] ];
 				
 				if(actionSouligneVague)
-					texteSortie = [texteSortie transformeSouligneVague];
+					texteSortie = [texteSortie stringByAppendingString: [tmpCaractere transformeSouligneVague] ];
 				
 				if(actionSurligne)
-					texteSortie = [texteSortie transformeSurligne];
+					texteSortie = [texteSortie stringByAppendingString: [tmpCaractere transformeSurligne] ];
 				
 				if(actionSurligneDouble)
-					texteSortie = [texteSortie transformeSurligneDouble];
+					texteSortie = [texteSortie stringByAppendingString: [tmpCaractere transformeSurligneDouble] ];
 				
 				if(actionBarre)
-					texteSortie = [texteSortie transformeBarre];
+					texteSortie = [texteSortie stringByAppendingString: [tmpCaractere transformeBarre] ];
 				
 				if(actionBarreLong)
-					texteSortie = [texteSortie transformeBarreLong];
+					texteSortie = [texteSortie stringByAppendingString: [tmpCaractere transformeBarreLong] ];
 				
 				if(actionItalique)
 					texteSortie = [texteSortie stringByAppendingString: [tmpCaractere transformeItalique] ];
@@ -184,7 +184,7 @@ int main(int argc, char **argv) {
 					texteSortie = [texteSortie stringByAppendingString: [tmpCaractere transformeExposant] ];
 				
 				if(actionModifieAvecCode)
-					texteSortie = [texteSortie transformeCode:(NSString*)actionModifieAvecCode];
+					texteSortie = [texteSortie stringByAppendingString: [tmpCaractere transformeCode:(NSString*)actionModifieAvecCode] ];
 		
 			}
 

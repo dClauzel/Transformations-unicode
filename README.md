@@ -68,6 +68,7 @@ L'outil transformations-unicode utilise à la compilation [GBCli: Objective C fo
 ```bash
 $ xcodebuild clean
 $ xcodebuild
+$ xcodebuild install
 ```
 
 `transformations-unicode` est installé dans `build/Release/transformations-unicode`
